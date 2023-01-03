@@ -1,0 +1,52 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@/fantasyui/*": [
+                "components/*"
+            ],
+            "@/styles/*": [
+                "styles/*"
+            ],
+            "fantasyui": [
+                "components/index.ts"
+            ],
+            "fantasyui/es/*": [
+                "components/*"
+            ],
+            "fantasyui/lib/*": [
+                "components/*"
+            ],
+            "fantasyui/locale/*": [
+                "components/locale/*"
+            ]
+        },
+        "strictNullChecks": true,
+        "declarationDir": "lib",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "jsx": "react",
+        "jsxFactory": "React.createElement",
+        "jsxFragmentFactory": "React.Fragment",
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "noImplicitAny": true,
+        "target": "es6",
+        "lib": [
+            "dom",
+            "es2017"
+        ],
+        "skipLibCheck": true,
+        "stripInternal": true,
+        "outDir": "dist", // 生成目录
+        "declaration": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules",
+        "lib",
+        "es"
+    ]
+}

@@ -39,7 +39,8 @@ const WARN_AFTER_CHUNK_GZIP_SIZE = 1024 * 1024;
 const isInteractive = process.stdout.isTTY;
 
 // Warn and crash if required files are missing
-if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
+// remove html requirement
+if (!checkRequiredFiles([paths.appIndexJs])) {
   process.exit(1);
 }
 
@@ -48,6 +49,7 @@ const writeStatsJson = argv.indexOf('--stats') !== -1;
 
 // Generate configuration
 const config = configFactory('production');
+console.log(config);
 
 // We require that you explicitly set browsers and do not fall back to
 // browserslist defaults.
@@ -134,7 +136,6 @@ checkBrowsers(paths.appPath, isInteractive)
 // Create the production build and print the deployment instructions.
 function build(previousFileSizes) {
   console.log('Creating an optimized production build...');
-
   const compiler = webpack(config);
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
