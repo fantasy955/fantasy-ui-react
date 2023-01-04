@@ -13,9 +13,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - run: npm i pnpm -g
       - run: npm install
-      - run: npm build:site
+      - run: npm run build:site
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
