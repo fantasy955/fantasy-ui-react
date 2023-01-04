@@ -125,6 +125,7 @@
     "jest": "^24.9.0",
     "lint-staged": "^13.1.0",
     "mini-css-extract-plugin": "^2.4.5",
+    "plop": "^2",
     "postcss": "^8.4.4",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^6.2.1",
