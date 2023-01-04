@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "private": false,
   "description": "A React UI Library.",
+  "homepage": "https://fantasy995.github.io/fantasy-ui-react/",
   "repository": {
     "type": "git",
     "url": "git@github.com:fantasy995/fantasy-ui-react.git"
