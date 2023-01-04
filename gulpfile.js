@@ -12,7 +12,11 @@ const paths = {
         dist: 'dist', // umd文件存放的目录名 
     },
     styles: 'styles/**/*.less', // 样式文件路径 
-    scripts: ['components/**/*.{ts,tsx}', '!components/**/demo/*.{ts,tsx}'], // 脚本文件路径
+    scripts: [
+        'components/**/*.{ts,tsx}',
+        '!components/**/demo/*.{ts,tsx}',
+        '!components/**/__tests__/*.{ts,tsx}',
+    ],
 };
 
 
@@ -105,12 +109,12 @@ function compileScripts(babelEnv, destDir) {
  * 依赖的其他组件样式 import '../test-comp/style/index.js' => import '../test-comp/style/css.js'
  * @param {string} content
  */
- function cssInjection(content) {
+function cssInjection(content) {
     return content
-      .replace(/\/style\/?'/g, "/style/css'")
-      .replace(/\/style\/?"/g, '/style/css"')
-      .replace(/\.less/g, '.css');
-  }
+        .replace(/\/style\/?'/g, "/style/css'")
+        .replace(/\/style\/?"/g, '/style/css"')
+        .replace(/\.less/g, '.css');
+}
 
 const build = gulp.parallel(buildScripts, copyLess, less2css);
 
