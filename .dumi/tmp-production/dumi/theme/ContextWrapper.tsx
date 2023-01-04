@@ -33,7 +33,7 @@ export default function DumiContextWrapper() {
 
   return (
     <SiteContext.Provider value={{
-      pkg: {"name":"fantasy-ui-react","description":"A React UI Library.","version":"0.1.0","license":"ISC","repository":{"type":"git","url":"git@github.com:fantasy995/fantasy-ui-react.git"},"authors":{"name":"fantasy955","email":"1642063542@qq.com"}},
+      pkg: {"name":"@fantasy955/fantasy-ui-react","description":"A React UI Library.","version":"0.1.1","license":"ISC","repository":{"type":"git","url":"git@github.com:fantasy995/fantasy-ui-react.git"},"authors":{"name":"fantasy955","email":"1642063542@qq.com"}},
       entryExports,
       demos,
       components,
