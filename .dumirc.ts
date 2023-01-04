@@ -27,7 +27,7 @@ export default defineConfig({
       {
         libraryName: '@fantasy955/fantasy-ui-react',
         libraryDirectory: '',
-        customStyleName: (name) => path.resolve(__dirname, `components/styles/${name}/index.ts`),
+        customStyleName: (name) => path.resolve(__dirname, `styles/${name}/index.ts`),
       },
     ],
   ],
