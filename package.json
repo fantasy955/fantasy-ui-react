@@ -29,6 +29,7 @@
     "commit": "git-cz",
     "deploy:site": "npm run build:site && gh-pages -d doc-site",
     "dev": "dumi dev",
+    "start": "dumi dev",
     "new": "plop --plopfile ./scripts/plopfile.ts",
     "preview:site": "npm run build:site && serve doc-site",
     "release": "ts-node ./scripts/release.ts",
