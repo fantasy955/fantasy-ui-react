@@ -4,6 +4,11 @@ import path from 'path';
 let base: string | undefined;
 let publicPath: string | undefined;
 
+if (process.env.DUMI_ENV) {
+  process.env.NODE_ENV = process.env.DUMI_ENV;
+}
+
+console.log(process.env.NODE_ENV);
 // Github Pages 部署时需要更换为自己的仓库名
 if (process.env.NODE_ENV === 'production' && process.env.PREVIEW !== '1') {
   base = '/fantasy-ui-react/';
