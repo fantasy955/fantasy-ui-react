@@ -25,11 +25,7 @@
   "scripts": {
     "build": "npm run clean && npm run build:types && gulp",
     "build:site": "rimraf doc-site && dumi build",
-<<<<<<< dev
-    "vercel-build:site": "DUMI_ENV=development rimraf doc-site && dumi build",
-=======
-    "vercel-build:site": "DUMI_ENV=development && rimraf doc-site && dumi build",
->>>>>>> master
+    "vercel-build:site": "rimraf doc-site && DUMI_ENV=development dumi build",
     "build:types": "npm run clean && tsc -p tsconfig.build.json && cpr lib esm",
     "clean": "rimraf lib esm dist",
     "commit": "git-cz",
