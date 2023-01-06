@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "private": false,
   "description": "A React UI Library.",
+  "homepage": "https://fantasy995.github.io/fantasy-ui-react/",
   "repository": {
     "type": "git",
     "url": "git@github.com:fantasy995/fantasy-ui-react.git"
@@ -24,9 +25,11 @@
   "scripts": {
     "build": "npm run clean && npm run build:types && gulp",
     "build:site": "rimraf doc-site && dumi build",
+    "vercel-build:site": "NODE_ENV=development rimraf doc-site && dumi build",
     "build:types": "npm run clean && tsc -p tsconfig.build.json && cpr lib esm",
     "clean": "rimraf lib esm dist",
     "commit": "git-cz",
+    "pre-commit": "lint-staged",
     "deploy:site": "npm run build:site && gh-pages -d doc-site",
     "dev": "dumi dev",
     "start": "dumi dev",
@@ -48,12 +51,10 @@
     "components/**/*.ts?(x)": [
       "prettier --write",
       "eslint --fix",
-      "git add",
       "jest --bail --findRelatedTests"
     ],
-    "components/**/*.less": [
-      "stylelint --syntax less --fix",
-      "git add"
+    "styles/**/*.less": [
+      "stylelint --syntax less --fix"
     ]
   },
   "config": {
@@ -84,6 +85,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@babel/eslint-plugin": "^7.19.1",
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -91,6 +93,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "@umijs/fabric": "^3.0.0",
     "babel-loader": "^8.2.3",
     "babel-plugin-import": "^1.13.5",
     "babel-plugin-named-asset-import": "^0.3.8",
@@ -109,8 +112,16 @@
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
     "dumi": "^2.0.18",
-    "eslint": "^8.3.0",
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-compat": "^4.0.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-unicorn": "^45.0.2",
     "eslint-webpack-plugin": "^3.1.1",
     "file-loader": "^6.2.0",
     "fs-extra": "^10.0.0",
@@ -131,6 +142,7 @@
     "postcss-loader": "^6.2.1",
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^7.0.1",
+    "prettier": "^2.8.1",
     "prompts": "^2.4.2",
     "react-app-polyfill": "^3.0.0",
     "react-dev-utils": "^12.0.1",
