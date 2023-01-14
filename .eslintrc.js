@@ -29,7 +29,7 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/issues/46#issuecomment-470486034
     overrides: [
         {
-            files: ['*.ts', '*.tsx'],
+            files: ['src/*/**/*.ts', 'src/*/**/*.tsx'],
             rules: {
                 '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
                 'no-unused-expressions': 'off',
@@ -40,7 +40,7 @@ module.exports = {
         {
             // In v2, explicitly apply eslint-plugin-markdown's `markdown`
             // processor on any Markdown files you want to lint.
-            files: ['components/*/demo/*.md'],
+            files: ['src/*/demo/*.md'],
             processor: 'markdown/markdown',
         },
         {
@@ -48,10 +48,10 @@ module.exports = {
             // containing Markdown file. Each code block has a virtual filename
             // appended to the Markdown file's path.
             files: [
-                'components/*/demo/*.md/*.ts',
-                'components/*/demo/*.md/*.tsx',
-                'components/*/demo/*.md/*.js',
-                'components/*/demo/*.md/*.jsx',
+                'src/*/demo/*.md/*.ts',
+                'src/*/demo/*.md/*.tsx',
+                'src/*/demo/*.md/*.js',
+                'src/*/demo/*.md/*.jsx',
             ],
             // Configuration for fenced code blocks goes with the override for
             // the code block's virtual filename, for example:
@@ -88,16 +88,16 @@ module.exports = {
                 'jsx-a11y/control-has-associated-label': 0,
                 'import/no-extraneous-dependencies': 0,
                 'react/jsx-no-constructed-context-values': 0,
-                'react/no-unstable-nested-components': 0,
+                'react/no-unstable-nested-src': 0,
             },
         },
         {
-            files: ['components/**/demo/*.tsx'],
+            files: ['src/**/demo/*.tsx'],
             rules: {
                 'import/no-extraneous-dependencies': 0,
                 'no-console': 0,
                 'compat/compat': 0,
-                'react/no-unstable-nested-components': 0,
+                'react/no-unstable-nested-src': 0,
                 'jsx-a11y/control-has-associated-label': 0,
                 'class-methods-use-this': 0,
                 'react/no-access-state-in-setstate': 0,
@@ -109,7 +109,7 @@ module.exports = {
                 'import/no-extraneous-dependencies': 0,
                 'no-console': 0,
                 'compat/compat': 0,
-                'react/no-unstable-nested-components': 0,
+                'react/no-unstable-nested-src': 0,
                 'jsx-a11y/control-has-associated-label': 0,
                 'class-methods-use-this': 0,
                 'react/no-access-state-in-setstate': 0,

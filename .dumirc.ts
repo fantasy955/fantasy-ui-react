@@ -22,7 +22,7 @@ export default defineConfig({
   outputPath: 'doc-site',
   resolve: {
     docDirs: ['docs'],
-    atomDirs: [{ type: 'component', dir: 'components' }],
+    atomDirs: [{ type: 'component', dir: 'src' }],
   },
   exportStatic: {},
   forkTSChecker: {},
@@ -32,7 +32,8 @@ export default defineConfig({
       {
         libraryName: '@fantasy955/fantasy-ui-react',
         libraryDirectory: '',
-        customStyleName: (name) => path.resolve(__dirname, `styles/${name}/index.ts`),
+        customStyleName: (name: string) =>
+          path.resolve(__dirname, `src/${name}/style/index.ts`),
       },
     ],
   ],
