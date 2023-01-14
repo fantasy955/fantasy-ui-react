@@ -2,23 +2,11 @@
     "compilerOptions": {
         "baseUrl": "./",
         "paths": {
-            "@/fantasyui/*": [
-                "components/*"
+            "@fantasyui/*": [
+                "src/*"
             ],
-            "@/styles/*": [
-                "styles/*"
-            ],
-            "fantasyui": [
-                "components/index.ts"
-            ],
-            "fantasyui/es/*": [
-                "components/*"
-            ],
-            "fantasyui/lib/*": [
-                "components/*"
-            ],
-            "fantasyui/locale/*": [
-                "components/locale/*"
+            "@fantasy955/fantasy-ui-react": [
+                "src/index.ts"
             ]
         },
         "resolveJsonModule": true,
@@ -42,12 +30,18 @@
         "skipLibCheck": true,
         "stripInternal": true,
         "outDir": "dist", // 生成目录
-        "declaration": true,
-        "allowSyntheticDefaultImports": true
+        "declaration": true
     },
+    "include": [
+        "src",
+        "typings.d.ts"
+    ],
     "exclude": [
         "node_modules",
         "lib",
-        "es"
+        "es",
+        "**/__test__",
+        "test",
+        "tests"
     ]
 }
