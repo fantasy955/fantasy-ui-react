@@ -1,4 +1,5 @@
-/* eslint-disable  import/no-extraneous-dependencies,@typescript-eslint/camelcase, no-console */
+/* eslint-disable camelcase */
+/* eslint-disable  import/no-extraneous-dependencies, no-console */
 import inquirer from 'inquirer';
 import fs from 'fs';
 import path from 'path';
@@ -8,15 +9,6 @@ import chalk from 'chalk';
 import semverInc from 'semver/functions/inc';
 import { ReleaseType } from 'semver';
 import pkg from '../package.json';
-// const inquirer = require('inquirer');
-// const fs = require('fs');
-// const path = require('path');
-// const child_process = require('child_process');
-// const util = require('util');
-// const chalk = require('chalk');
-// const semverInc = require('semver/functions/inc');
-// const { ReleaseType } = require('semver');
-// const pkg = require('../package.json');
 
 const exec = util.promisify(child_process.exec);
 
@@ -27,6 +19,7 @@ const run = async (command: string) => {
 
 const currentVersion = pkg.version;
 
+// eslint-disable-next-line no-unused-vars
 const getNextVersions = (): { [key in ReleaseType]: string | null } => ({
   major: semverInc(currentVersion, 'major'),
   minor: semverInc(currentVersion, 'minor'),

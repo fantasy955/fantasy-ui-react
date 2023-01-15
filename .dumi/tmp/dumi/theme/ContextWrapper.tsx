@@ -33,14 +33,14 @@ export default function DumiContextWrapper() {
 
   return (
     <SiteContext.Provider value={{
-      pkg: {"name":"@fantasy955/fantasy-ui-react","description":"A React UI Library.","version":"0.1.1","license":"ISC","repository":{"type":"git","url":"git@github.com:fantasy995/fantasy-ui-react.git"},"authors":{"name":"fantasy955","email":"1642063542@qq.com"}},
+      pkg: {"name":"@fantasy955/fantasy-ui-react","description":"A React UI Library.","version":"0.1.2","license":"ISC","repository":{"type":"git","url":"git@github.com:fantasy995/fantasy-ui-react.git"},"authors":{"name":"fantasy955","email":"1642063542@qq.com"}},
       entryExports,
       demos,
       components,
       locales,
       loading,
       setLoading,
-      themeConfig: {"title":"Fantasy UI","footer":"Copyright © 2023 | Powered by <a href=\"https://d.umijs.org\" target=\"_blank\" rel=\"noreferrer\">dumi</a>"},
+      themeConfig: {"title":"Fantasy UI","footer":"Copyright © 2023 | Powered by <a href=\"https://d.umijs.org\" target=\"_blank\" rel=\"noreferrer\">dumi</a>","prefersColor":{"default":"light","switch":true}},
     }}>
       {outlet}
     </SiteContext.Provider>
