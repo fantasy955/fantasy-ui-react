@@ -1,6 +1,6 @@
 {
   "name": "@fantasy955/fantasy-ui-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "A React UI Library.",
   "homepage": "https://fantasy995.github.io/fantasy-ui-react/",
@@ -25,21 +25,21 @@
   "scripts": {
     "build": "npm run clean && npm run build:types && gulp",
     "build:site": "rimraf doc-site && dumi build",
-    "vercel-build:site": "rimraf doc-site && DUMI_ENV=development dumi build",
     "build:types": "tsc -p tsconfig.build.json && cpr lib esm",
     "clean": "rimraf lib esm dist",
     "commit": "git-cz",
-    "pre-commit": "lint-staged",
     "deploy:site": "npm run build:site && gh-pages -d doc-site",
     "dev": "dumi dev",
-    "start": "dumi dev",
     "new": "plop --plopfile ./scripts/plopfile.ts",
+    "pre-commit": "lint-staged",
     "preview:site": "npm run build:site && serve doc-site",
     "release": "ts-node ./scripts/release.ts",
+    "start": "dumi dev",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:update": "jest --updateSnapshot",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "vercel-build:site": "rimraf doc-site && DUMI_ENV=development dumi build"
   },
   "husky": {
     "hooks": {
@@ -53,7 +53,7 @@
       "eslint --fix",
       "jest --bail --findRelatedTests"
     ],
-    "src/**/style/*.less": [
+    "src/**/*.less": [
       "stylelint --syntax less --fix"
     ]
   },
@@ -113,7 +113,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
-    "dumi": "^2.0.18",
+    "dumi": "^2.0.6",
     "eslint": "^8.31.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-react-app": "^7.0.1",
