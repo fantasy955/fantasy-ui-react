@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_fantasy955_fantasy_ui_react=self.webpackChunk_fantasy955_fantasy_ui_react||[]).push([[9],{12535:function(i,e,a){a.r(e),a.d(e,{default:function(){return u}});var n=a(4982),r=a(62435),s=function(){var o=(0,n.UO)(),d=o.id,f=(0,n.WF)(),m=f.demos,c=m[d]||{},t=c.component;return t&&(0,r.createElement)(t)},u=s}}]);

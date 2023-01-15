@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_fantasy955_fantasy_ui_react=self.webpackChunk_fantasy955_fantasy_ui_react||[]).push([[935],{2511:function(s,a,_){_.r(a);var d=_(1100),i=_(1852),r=_(596),o=_(6373),m=_(4529),f=_(7971),e=_(8114),E=_(2435),t=_(6074);function n(){var u=(0,e.eL)(),l=u.texts;return(0,t.jsx)(e.dY,{children:(0,t.jsx)(t.Fragment,{})})}a.default=n}}]);
