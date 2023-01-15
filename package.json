@@ -9,12 +9,6 @@
     "url": "git@github.com:fantasy995/fantasy-ui-react.git"
   },
   "license": "ISC",
-  "sideEffects": [
-    "dist/*",
-    "esm/styles/*",
-    "lib/styles/*",
-    "*.less"
-  ],
   "main": "lib/index.js",
   "module": "esm/index.js",
   "typings": "lib/index.d.ts",

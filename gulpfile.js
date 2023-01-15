@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const less = require('gulp-less');
@@ -12,7 +11,7 @@ const paths = {
         esm: 'esm', // ES module 文件存放的目录名 
         dist: 'dist', // umd文件存放的目录名 
     },
-    styles: 'src/**/style/*.less', // 样式文件路径 
+    styles: 'src/**/*.less', // 样式文件路径 
     scripts: [
         'src/**/*.{ts,tsx}',
         '!src/**/demo/*.{ts,tsx}',

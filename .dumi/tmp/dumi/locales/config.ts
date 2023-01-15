@@ -10,8 +10,10 @@ export const locales = [
 ];
 export const messages = {
   "en-US": {
-    "a": "A",
     "header.search.placeholder": "Type keywords...",
+    "header.color.mode.light": "Light Mode",
+    "header.color.mode.dark": "Dark Mode",
+    "header.color.mode.auto": "Follow System",
     "previewer.actions.code.expand": "Show Code",
     "previewer.actions.code.shrink": "Hide Code",
     "previewer.actions.codesandbox": "Open in CodeSandbox",
@@ -32,8 +34,10 @@ export const messages = {
     "layout.sidebar.btn": "Sidebar"
   },
   "zh-CN": {
-    "a": "嘿",
     "header.search.placeholder": "输入关键字搜索...",
+    "header.color.mode.light": "亮色模式",
+    "header.color.mode.dark": "暗色模式",
+    "header.color.mode.auto": "跟随系统",
     "previewer.actions.code.expand": "展开代码",
     "previewer.actions.code.shrink": "收起代码",
     "previewer.actions.codesandbox": "在 CodeSandbox 中打开",

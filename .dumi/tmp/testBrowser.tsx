@@ -9,7 +9,6 @@ import { createPluginManager } from './core/plugin';
 import { getRoutes } from './core/route';
 import type { Location } from 'history';
 
-import './core/polyfill';
 
 const publicPath = '/';
 const runtimePublicPath = false;

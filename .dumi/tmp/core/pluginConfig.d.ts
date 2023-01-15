@@ -62,6 +62,14 @@ svgo?: ({
 styleLoader?: {
 
 }
+srcTranspilerOptions?: {
+esbuild?: {
+
+}
+swc?: {
+
+}
+}
 srcTranspiler?: ("babel" | "esbuild" | "swc" | "none")
 sassLoader?: {
 
@@ -172,6 +180,17 @@ exportStatic?: {
 extraRoutePaths?: ((() => any) | string[])
 }
 favicons?: string[]
+icons?: {
+autoInstall?: {
+
+}
+defaultComponentConfig?: {
+
+}
+alias?: {
+
+}
+}
 mock?: {
 exclude?: string[]
 include?: string[]
@@ -183,6 +202,9 @@ getConfigFromEntryFile?: boolean
 entry?: {
 
 }
+}
+phantomDependency?: {
+exclude?: string[]
 }
 polyfill?: {
 imports?: string[]
