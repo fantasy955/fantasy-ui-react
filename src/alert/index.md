@@ -4,8 +4,9 @@ nav:
   title: 组件
   order: 2
 group:
-  title: 反馈
+  title: 通用
   order: 1
+toc: content
 ---
 
 # Alert 警告提示
