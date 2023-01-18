@@ -8,7 +8,7 @@ if (process.env.DUMI_ENV) {
   process.env.NODE_ENV = process.env.DUMI_ENV;
 }
 
-console.log(process.env.NODE_ENV);
+// console.log(process.env.NODE_ENV);
 // Github Pages 部署时需要更换为自己的仓库名
 if (process.env.NODE_ENV === 'production' && process.env.PREVIEW !== '1') {
   base = '/fantasy-ui-react/';
@@ -24,6 +24,10 @@ export default defineConfig({
     docDirs: ['docs'],
     atomDirs: [{ type: 'component', dir: 'src' }],
   },
+  links: [
+    {rel: "icon", href: "/fantasy955logo2.png"},
+  ],
+  logo: "/fantasy955logo2.png",
   exportStatic: {},
   forkTSChecker: {},
   extraBabelPlugins: [
