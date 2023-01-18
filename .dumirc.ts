@@ -24,6 +24,10 @@ export default defineConfig({
     docDirs: ['docs'],
     atomDirs: [{ type: 'component', dir: 'src' }],
   },
+  links: [
+    {rel: "icon", href: "/fantasy955logo2.png"},
+  ],
+  logo: "/fantasy955logo2.png",
   exportStatic: {},
   forkTSChecker: {},
   extraBabelPlugins: [

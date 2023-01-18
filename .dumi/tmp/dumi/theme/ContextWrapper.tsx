@@ -40,7 +40,7 @@ export default function DumiContextWrapper() {
       locales,
       loading,
       setLoading,
-      themeConfig: {"title":"Fantasy UI","footer":"Copyright © 2023 | Powered by <a href=\"https://d.umijs.org\" target=\"_blank\" rel=\"noreferrer\">dumi</a>","prefersColor":{"default":"light","switch":true}},
+      themeConfig: {"logo":"/fantasy955logo2.png","title":"Fantasy UI","footer":"Copyright © 2023 | Powered by <a href=\"https://d.umijs.org\" target=\"_blank\" rel=\"noreferrer\">dumi</a>","prefersColor":{"default":"light","switch":true}},
     }}>
       {outlet}
     </SiteContext.Provider>
