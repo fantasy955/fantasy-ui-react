@@ -3,6 +3,7 @@ import path from 'path';
 
 let base: string | undefined;
 let publicPath: string | undefined;
+let logoPath = '/fantasy955logo2.png';
 
 if (process.env.DUMI_ENV) {
   process.env.NODE_ENV = process.env.DUMI_ENV;
@@ -13,6 +14,7 @@ if (process.env.DUMI_ENV) {
 if (process.env.NODE_ENV === 'production' && process.env.PREVIEW !== '1') {
   base = '/fantasy-ui-react/';
   publicPath = '/fantasy-ui-react/';
+  logoPath = '/fantasy-ui-react' + logoPath; 
 }
 
 export default defineConfig({
@@ -25,9 +27,9 @@ export default defineConfig({
     atomDirs: [{ type: 'component', dir: 'src' }],
   },
   links: [
-    {rel: "icon", href: "/fantasy955logo2.png"},
+    {rel: "icon", href: logoPath},
   ],
-  logo: "/fantasy955logo2.png",
+  logo: logoPath,
   exportStatic: {},
   forkTSChecker: {},
   extraBabelPlugins: [
